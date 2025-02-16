@@ -31,7 +31,7 @@ jobs:
            echo "$DOCKER_PASS" | docker login -u $DOCKER_USER --password-stdin
       - name: Tag and push the image to docker hub 
         run: |
-          docker tag django-notes-app $DOCKER_USER/django-notes-app:latest
+          docker tag django-notes-app $DOCKER_USER/python-notes-app:latest
           docker push $DOCKER_USER/django-notes-app:latest
       - name: deploy the application
         run: |
