@@ -25,8 +25,8 @@ jobs:
         
       - name: login to docker hub
         env:
-          DOCKER_USER: ${{secrets.DOCKERHUB_USERNAME}}
-          DOCKER_PASS: ${{secrets.DOCKERHUB_PASSWORD}}
+          DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKER_PASS: ${{ secrets.DOCKERHUB_PASSWORD }}
         run: |
            echo "$DOCKER_PASS" | docker login -u $DOCKER_USER --password-stdin
       - name: Tag and push the image to docker hub 
