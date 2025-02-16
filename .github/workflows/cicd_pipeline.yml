@@ -32,7 +32,7 @@ jobs:
       - name: Tag and push the image to docker hub 
         run: |
           docker tag django-notes-app $DOCKER_USER/python-notes-app:latest
-          docker push $DOCKER_USER/django-notes-app:latest
+          docker push $DOCKER_USER/python-notes-app:latest
       - name: deploy the application
         run: |
            docker-compose down
